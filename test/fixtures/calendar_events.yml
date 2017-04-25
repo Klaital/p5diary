@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2017-04-25 21:33:05
+  time_slot: MyString
+  weather: MyString
+  weather_modifier: MyString
+  events: MyText
+  event_requirements: MyString
+  notes: MyText
+
+two:
+  date: 2017-04-25 21:33:05
+  time_slot: MyString
+  weather: MyString
+  weather_modifier: MyString
+  events: MyText
+  event_requirements: MyString
+  notes: MyText

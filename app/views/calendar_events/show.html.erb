@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @calendar_event.date %>
+</p>
+
+<p>
+  <strong>Time slot:</strong>
+  <%= @calendar_event.time_slot %>
+</p>
+
+<p>
+  <strong>Weather:</strong>
+  <%= @calendar_event.weather %>
+</p>
+
+<p>
+  <strong>Weather modifier:</strong>
+  <%= @calendar_event.weather_modifier %>
+</p>
+
+<p>
+  <strong>Events:</strong>
+  <%= @calendar_event.events %>
+</p>
+
+<p>
+  <strong>Event requirements:</strong>
+  <%= @calendar_event.event_requirements %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @calendar_event.notes %>
+</p>
+
+<%= link_to 'Edit', edit_calendar_event_path(@calendar_event) %> |
+<%= link_to 'Back', calendar_events_path %>
