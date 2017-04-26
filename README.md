@@ -33,11 +33,13 @@ Calendar
  - Events
  - Event Requirements
  - Notes
+ (todo:)
  - Confidants Available
     - Location
 Users
  - email
  - password
+ (todo:)
  - Playthroughs
     - Title
     - Notes

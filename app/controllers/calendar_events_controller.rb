@@ -7,6 +7,11 @@ class CalendarEventsController < ApplicationController
     @calendar_events = CalendarEvent.all
   end
 
+  def timeline
+    @calendar_events = CalendarEvent.all
+  end
+
+
   # GET /calendar_events/1
   # GET /calendar_events/1.json
   def show

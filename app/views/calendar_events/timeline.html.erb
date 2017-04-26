@@ -1,0 +1,20 @@
+<section id="cd-timeline">
+<% @calendar_events.each do |calendar_event| %>
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img">
+            <%= image_tag calendar_event.weather.to_s + ".png" unless calendar_event.weather.nil? %>
+        </div>
+
+        <div class="cd-timeline-content">
+            <h2>Weather: <%= calendar_event.weather_to_s %></h2>
+
+            <p><%= calendar_event.events %></p>
+            <p>Requirements: <%= calendar_event.event_requirements %></p>
+            <p><%= calendar_event.notes %></p>
+
+            <%= link_to 'Show', calendar_event, class: 'cd-read-more' %>
+            <span class="cd-date"><%= calendar_event.date %>, <%= calendar_event.time_slot %></span>
+        </div>
+    </div>
+<% end %>
+</section>
