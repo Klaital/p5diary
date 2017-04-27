@@ -205,27 +205,119 @@ calendar_events = CalendarEvent.create([
         time_slot: '2000 Evening',
         
         events: "Free Evening."
-    },
-    {
-        date: Date.new(2016, 04, 18),
-        time_slot: '1600 After School',
-        weather: 'Cloudy',
-        
-        events: "Free afternoon."
-    },
-    {
-        date: Date.new(2016, 04, 18),
-        time_slot: '2000 Evening',
-        weather: 'Cloudy',
-        
-        events: "Clean your room. (you don't have a choice)"
-    },
-    {
-        date: Date.new(2016, 04, 19),
-        time_slot: '0600 Morning',
-        
-        events: "Class lecture about optical illusions. The answer is \"C meets A\""
     }
 ])
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 18),
+    time_slot: '1600 After School',
+    weather: 'Cloudy',
+    
+    events: "Free afternoon."
+})
+e.confidant_availability_events.create({
+    confidant: death,
+    location: 'Clinic',
+    notes: ''
+})
 
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 18),
+    time_slot: '2000 Evening',
+    weather: 'Cloudy',
+    
+    events: "Clean your room. (you don't have a choice)"
+})
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 19),
+    time_slot: '0600 Morning',
+    
+    events: "Class lecture about optical illusions. The answer is \"C meets A\""
+})
+
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 19),
+    time_slot: '1600 After School',
+    
+    events: "Free afternoon"
+})
+e.confidant_availability_events.create({
+    confidant: chariot,
+    location: 'School 2F',
+})
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 19),
+    time_slot: '2000 Evening',
+    
+    events: "Free evening. I forgot to note who was available"
+})
+
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 20),
+    time_slot: '0500 Early Morning',
+    
+    events: "Read on the train"
+})
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 20),
+    time_slot: '1600 After School',
+    weather: 'Rain',
+
+    events: "Free afternoon. Part-time jobs are now available. No social links want to play yet, so I usually study."
+})
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 20),
+    time_slot: '2000 Evening',
+    weather: 'Rain',
+
+    events: "Free evening, but you can't go out yet"
+})
+e.confidant_availability_events.create({
+    confidant: hierophant,
+    location: 'Leblanc',
+})
+
+
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 21),
+    time_slot: '1600 After School',
+    weather: 'Rain',
+
+    events: "Free afternoon"
+})
+e.confidant_availability_events.create({
+    confidant: death,
+    location: 'Clinic',
+})
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 21),
+    time_slot: '2000 Evening',
+    weather: 'Cloudy',
+
+    events: "Free evening, but you can't wander yet"
+})
+e.confidant_availability_events.create({
+    confidant: hierophant,
+    location: 'Leblanc',
+})
+
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 22),
+    time_slot: '1600 After School',
+
+    events: "Free afternoon"
+})
+e.confidant_availability_events.create({
+    confidant: chariot,
+    location: 'School 2F',
+})
+e.confidant_availability_events.create({
+    confidant: death,
+    location: 'Clinic',
+})
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 22),
+    time_slot: '2000 Evening',
+
+    events: "I chose an infiltration run, so I'm not sure if Hierophant was available tonight."
+})
 
