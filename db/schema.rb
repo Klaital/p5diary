@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427203030) do
+ActiveRecord::Schema.define(version: 20170427212649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,13 +28,14 @@ ActiveRecord::Schema.define(version: 20170427203030) do
   end
 
   create_table "confidant_availability_events", force: :cascade do |t|
-    t.string   "confidant"
     t.string   "location"
     t.text     "notes"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "calendar_event_id"
+    t.integer  "confidant_id"
     t.index ["calendar_event_id"], name: "index_confidant_availability_events_on_calendar_event_id", using: :btree
+    t.index ["confidant_id"], name: "index_confidant_availability_events_on_confidant_id", using: :btree
   end
 
   create_table "confidants", force: :cascade do |t|
