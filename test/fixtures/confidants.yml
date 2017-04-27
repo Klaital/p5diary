@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  arcana: MyString
+  name: MyString
+  start_date: 2017-04-27 18:06:27
+  notes: MyText
+
+two:
+  arcana: MyString
+  name: MyString
+  start_date: 2017-04-27 18:06:27
+  notes: MyText

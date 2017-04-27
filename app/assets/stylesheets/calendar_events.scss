@@ -108,7 +108,7 @@ Main components
 .cd-timeline-block {
 	position: relative;
 	margin: 2em 0;
-	@include clearfix;
+    background-color: pink;
 
 	&:first-child {
 		margin-top: 0;

@@ -1,4 +1,6 @@
 class CalendarEvent < ApplicationRecord
+    has_many :confidant_availability_events
+    
     def weather_to_s
         if self.weather.nil?
             return "??"

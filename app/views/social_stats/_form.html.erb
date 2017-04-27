@@ -1,0 +1,47 @@
+<%= form_for(social_stat) do |f| %>
+  <% if social_stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(social_stat.errors.count, "error") %> prohibited this social_stat from being saved:</h2>
+
+      <ul>
+      <% social_stat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rank2 %>
+    <%= f.number_field :rank2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rank3 %>
+    <%= f.number_field :rank3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rank4 %>
+    <%= f.number_field :rank4 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rank5 %>
+    <%= f.number_field :rank5 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :notes %>
+    <%= f.text_area :notes %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

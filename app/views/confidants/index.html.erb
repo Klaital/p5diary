@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Confidants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Arcana</th>
+      <th>Name</th>
+      <th>Start date</th>
+      <th>Notes</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @confidants.each do |confidant| %>
+      <tr>
+        <td><%= link_to confidant.arcana, confidant %></td>
+        <td><%= link_to confidant.name, confidant %></td>
+        <td><%= confidant.start_date %></td>
+        <td><%= confidant.notes %></td>
+        <td><%= link_to 'Edit', edit_confidant_path(confidant) %></td>
+        <td><%= link_to 'Destroy', confidant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Confidant', new_confidant_path %>

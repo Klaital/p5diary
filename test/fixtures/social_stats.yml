@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  rank2: 1
+  rank3: 1
+  rank4: 1
+  rank5: 1
+  notes: MyText
+
+two:
+  name: MyString
+  rank2: 1
+  rank3: 1
+  rank4: 1
+  rank5: 1
+  notes: MyText

@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Arcana:</strong>
+  <%= @confidant.arcana %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @confidant.name %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @confidant.start_date %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <pre>
+  <%= @confidant.notes %>
+  <pre>
+</p>
+
+<%= link_to 'Edit', edit_confidant_path(@confidant) %> |
+<%= link_to 'Back', confidants_path %>

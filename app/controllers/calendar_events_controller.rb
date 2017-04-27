@@ -15,6 +15,7 @@ class CalendarEventsController < ApplicationController
   # GET /calendar_events/1
   # GET /calendar_events/1.json
   def show
+    @confidant_events = @calendar_event.confidant_availability_events
   end
 
   # GET /calendar_events/new
