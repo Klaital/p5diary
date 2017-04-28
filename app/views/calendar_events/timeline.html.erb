@@ -11,6 +11,22 @@
             <p><%= calendar_event.events %></p>
             <p>Requirements: <%= calendar_event.event_requirements %></p>
             <p><%= calendar_event.notes %></p>
+            <p>
+                <table class="confidant-availability">
+                    <tr>
+                        <th>Confidant</th>
+                        <th>Location</th>
+                        <th>Notes</th>
+                    </tr>
+                    <% calendar_event.confidant_availability_events.each do |confidant_event| %>
+                    <tr>
+                        <td><%= confidant_event.confidant.arcana %> / <%= confidant_event.confidant.name %></td>
+                        <td><%= confidant_event.location %></td>
+                        <td><%= confidant_event.notes %>
+                    </tr>
+                    <% end %>
+                </table>
+            </p>
 
             <%= link_to 'Show', calendar_event, class: 'cd-read-more' %>
             <span class="cd-date"><%= calendar_event.date %>, <%= calendar_event.time_slot %></span>
