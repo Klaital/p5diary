@@ -87,3 +87,19 @@ div {
 label {
   display: block;
 }
+
+table.confidant-availability {
+  border: 1px black solid;
+  tr {
+    padding: 5px 5px 5px 5px;
+    border-bottom: 1px grey solid;
+    th {
+      text-align: center;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    td {
+      text-align: center;
+    }
+  }
+}
