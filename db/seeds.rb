@@ -321,3 +321,53 @@ e = CalendarEvent.create({
     events: "I chose an infiltration run, so I'm not sure if Hierophant was available tonight."
 })
 
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 23),
+    time_slot: '0600 Morning',
+
+    events: "Class lecture: Nero performed Singing at the Olympics."
+})
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 23),
+    time_slot: '1600 After School',
+    weather: "Sunny",
+    events: "Free afternoon"
+})
+e.confidant_availability_events.create({
+    confidant: death,
+    location: 'Clinic',
+})
+
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 23),
+    time_slot: '2000 Evening',
+    weather: "Sunny",
+    events: "Free evening"
+})
+e.confidant_availability_events.create({
+    confidant: hierophant,
+    location: 'Leblanc',
+})
+
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 24),
+    time_slot: '1100 Daytime',
+    weather: "Sunny",
+    events: "Free day."
+})
+e.confidant_availability_events.create({
+    confidant: death,
+    location: 'Clinic',
+})
+
+e = CalendarEvent.create({
+    date: Date.new(2016, 04, 24),
+    time_slot: '2000 Evening',
+
+    events: "Free evening"
+})
+e.confidant_availability_events.create({
+    confidant: hierophant,
+    location: 'Leblanc',
+})
+
