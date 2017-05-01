@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @calendar_day.date %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @calendar_day.notes %>
+</p>
+
+<table>
+  <tr>
+    <th>Timeslot</th>
+    <th>Event Notes</th>
+    <th>Confidants Available</th>
+  </tr>
+  <% @calendar_day.calendar_events.each do |calendar_event| %>
+    <tr>
+      <td><%= link_to calendar_event.time_slot, calendar_event %></td>
+      <td><%= calendar_event.events %></td>
+      <td><%= calendar_event.confidant_availability_events.collect {|e| e.confidant.arcana}.join(', ') %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Edit', edit_calendar_day_path(@calendar_day) %> |
+<%= link_to 'Back', calendar_days_path %>

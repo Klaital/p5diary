@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :calendar_days
   resources :social_stats
   resources :confidants
   resources :calendar_events
