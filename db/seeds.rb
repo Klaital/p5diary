@@ -160,54 +160,55 @@ charm = SocialStat.create({
     rank5: 0,
 })
 
+# Persona 5 runs from April 10 through December 24
+Date.new(2016, 4, 10).upto(Date.new(2016, 12, 24)) {|d| CalendarDay.create({date:d, notes: ''})}
 
-calendar_events = CalendarEvent.create([
-    {
+e = CalendarDay.find_by(date: Date.new(2016, 04, 12)).calendar_events.create({
         date: Date.new(2016, 04, 12),
         time_slot: '0600 Morning',
 
         events: "Class Lecture. The answer is 'Logic'."
-    },
-    {
+})
+e = CalendarDay.find_by(date: Date.new(2016, 04, 12)).calendar_events.create({
         date: Date.new(2016, 04, 12),
         time_slot: '1600 After School',
         weather: 'Cloudy',
 
         events: "Forced Palace infiltration. Automatically get Chariot Rank 1"
-    },
-    {
+    })
+e = CalendarDay.find_by(date: Date.new(2016, 04, 13)).calendar_events.create({
         date: Date.new(2016, 04, 13),
         time_slot: '2000 Evening',
         
         events: "Interrogation event. Talk to the boy in Class 2-D, the pair outside 3-C, and the boy outside 1-B."
-    },
-    {
+    })
+e = CalendarDay.find_by(date: Date.new(2016, 04, 15)).calendar_events.create({
         date: Date.new(2016, 04, 15),
         time_slot: '1600 After School',
         
         events: "Forced Palace infiltration. Automatically get Lovers Rank 1"
-    },
-    {
+    })
+e = CalendarDay.find_by(date: Date.new(2016, 04, 15)).calendar_events.create({
         date: Date.new(2016, 04, 15),
         time_slot: '2000 Evening',
         
         events: "Meet Dr. Takemi at Leblanc."
-    },
-    {
+    })
+e = CalendarDay.find_by(date: Date.new(2016, 04, 16)).calendar_events.create({
         date: Date.new(2016, 04, 16),
         time_slot: '0600 Morning',
         
         events: "Class event: dodge the thrown chalk (Proficieny check)",
         event_requirements: "Proficiency Rank ?"
-    },
-    {
+    })
+e = CalendarDay.find_by(date: Date.new(2016, 04, 17)).calendar_events.create({
         date: Date.new(2016, 04, 17),
         time_slot: '2000 Evening',
         
         events: "Free Evening."
-    }
-])
-e = CalendarEvent.create({
+    })
+
+e = CalendarDay.find_by(date: Date.new(2016, 04, 18)).calendar_events.create({
     date: Date.new(2016, 04, 18),
     time_slot: '1600 After School',
     weather: 'Cloudy',
@@ -220,21 +221,21 @@ e.confidant_availability_events.create({
     notes: ''
 })
 
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 18)).calendar_events.create({
     date: Date.new(2016, 04, 18),
     time_slot: '2000 Evening',
     weather: 'Cloudy',
     
     events: "Clean your room. (you don't have a choice)"
 })
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 19)).calendar_events.create({
     date: Date.new(2016, 04, 19),
     time_slot: '0600 Morning',
     
     events: "Class lecture about optical illusions. The answer is \"C meets A\""
 })
 
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 19)).calendar_events.create({
     date: Date.new(2016, 04, 19),
     time_slot: '1600 After School',
     
@@ -244,27 +245,27 @@ e.confidant_availability_events.create({
     confidant: chariot,
     location: 'School 2F',
 })
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 19)).calendar_events.create({
     date: Date.new(2016, 04, 19),
     time_slot: '2000 Evening',
     
     events: "Free evening. I forgot to note who was available"
 })
 
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 20)).calendar_events.create({
     date: Date.new(2016, 04, 20),
     time_slot: '0500 Early Morning',
     
     events: "Read on the train"
 })
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 20)).calendar_events.create({
     date: Date.new(2016, 04, 20),
     time_slot: '1600 After School',
     weather: 'Rain',
 
     events: "Free afternoon. Part-time jobs are now available. No social links want to play yet, so I usually study."
 })
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 20)).calendar_events.create({
     date: Date.new(2016, 04, 20),
     time_slot: '2000 Evening',
     weather: 'Rain',
@@ -277,7 +278,7 @@ e.confidant_availability_events.create({
 })
 
 
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 21)).calendar_events.create({
     date: Date.new(2016, 04, 21),
     time_slot: '1600 After School',
     weather: 'Rain',
@@ -288,7 +289,7 @@ e.confidant_availability_events.create({
     confidant: death,
     location: 'Clinic',
 })
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 21)).calendar_events.create({
     date: Date.new(2016, 04, 21),
     time_slot: '2000 Evening',
     weather: 'Cloudy',
@@ -300,7 +301,7 @@ e.confidant_availability_events.create({
     location: 'Leblanc',
 })
 
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 22)).calendar_events.create({
     date: Date.new(2016, 04, 22),
     time_slot: '1600 After School',
 
@@ -314,20 +315,20 @@ e.confidant_availability_events.create({
     confidant: death,
     location: 'Clinic',
 })
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 22)).calendar_events.create({
     date: Date.new(2016, 04, 22),
     time_slot: '2000 Evening',
 
     events: "I chose an infiltration run, so I'm not sure if Hierophant was available tonight."
 })
 
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 23)).calendar_events.create({
     date: Date.new(2016, 04, 23),
     time_slot: '0600 Morning',
 
     events: "Class lecture: Nero performed Singing at the Olympics."
 })
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 23)).calendar_events.create({
     date: Date.new(2016, 04, 23),
     time_slot: '1600 After School',
     weather: "Sunny",
@@ -338,7 +339,7 @@ e.confidant_availability_events.create({
     location: 'Clinic',
 })
 
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 23)).calendar_events.create({
     date: Date.new(2016, 04, 23),
     time_slot: '2000 Evening',
     weather: "Sunny",
@@ -349,7 +350,7 @@ e.confidant_availability_events.create({
     location: 'Leblanc',
 })
 
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 24)).calendar_events.create({
     date: Date.new(2016, 04, 24),
     time_slot: '1100 Daytime',
     weather: "Sunny",
@@ -360,7 +361,7 @@ e.confidant_availability_events.create({
     location: 'Clinic',
 })
 
-e = CalendarEvent.create({
+e = CalendarDay.find_by(date: Date.new(2016, 04, 24)).calendar_events.create({
     date: Date.new(2016, 04, 24),
     time_slot: '2000 Evening',
 

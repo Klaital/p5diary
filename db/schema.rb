@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427212649) do
+ActiveRecord::Schema.define(version: 20170501212413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "calendar_days", force: :cascade do |t|
+    t.datetime "date"
+    t.text     "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "calendar_events", force: :cascade do |t|
     t.datetime "date"
@@ -25,6 +32,8 @@ ActiveRecord::Schema.define(version: 20170427212649) do
     t.text     "notes"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "calendar_day_id"
+    t.index ["calendar_day_id"], name: "index_calendar_events_on_calendar_day_id", using: :btree
   end
 
   create_table "confidant_availability_events", force: :cascade do |t|

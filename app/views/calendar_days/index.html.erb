@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Calendar Days</h1>
+
+<section id="cd-timeline">
+<% @calendar_days.each do |calendar_day| %>
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img">
+        </div>
+
+        <div class="cd-timeline-content">
+          <p> <%= calendar_day.notes %></p>
+            <p>
+                <table class="confidant-availability">
+                    <tr>
+                      <th>Weather</th>
+                      <th>Time Slot</th>
+                      <th>Confidant</th>
+                      <th>Location</th>
+                      <th>Notes</th>
+                    </tr>
+                    <% calendar_day.calendar_events.each do |calendar_event|; calendar_event.confidant_availability_events.each do |confidant_event| %>
+                    <tr>
+                        <td><%= image_tag calendar_event.weather.to_s + ".png" unless calendar_event.weather.nil? %></td>
+                        <td><%= link_to calendar_event.time_slot, calendar_event %></td>
+                        <td><%= link_to confidant_event.confidant.arcana, confidant_event.confidant %> / <%= confidant_event.confidant.name %></td>
+                        <td><%= confidant_event.location %></td>
+                        <td><%= confidant_event.notes %>
+                    </tr>
+                    <% end; end %>
+                </table>
+            </p>
+
+            <%= link_to 'Show', calendar_day, class: 'cd-read-more' %>
+            <span class="cd-date"><%= calendar_day.date %></span>
+        </div>
+    </div>
+<% end %>
+</section>
+
+<br />
+<%= link_to 'New Calendar Day', new_calendar_day_path %>
