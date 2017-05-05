@@ -372,3 +372,59 @@ e.confidant_availability_events.create({
     location: 'Leblanc',
 })
 
+e = CalendarDay.find_by(date: Date.new(2016, 04, 25)).calendar_events.create({
+    date: Date.new(2016, 04, 25),
+    time_slot: '0600 Morning',
+
+    events: "Lecture: The opposite meaning is doing something where you are convinced you are right."
+})
+e = CalendarDay.find_by(date: Date.new(2016, 04, 25)).calendar_events.create({
+    date: Date.new(2016, 04, 25),
+    time_slot: '1600 After School',
+    weather: 'Cloudy',
+
+    events: "Free time"
+})
+e.confidant_availability_events.create({
+    confidant: death,
+    location: 'Clinic',
+})
+e = CalendarDay.find_by(date: Date.new(2016, 04, 25)).calendar_events.create({
+    date: Date.new(2016, 04, 25),
+    time_slot: '2000 Evening',
+    weather: 'Cloudy',
+
+    events: "Free time"
+})
+e.confidant_availability_events.create({
+    confidant: hierophant,
+    location: 'Leblanc',
+})
+
+e = CalendarDay.find_by(date: Date.new(2016, 04, 26)).calendar_events.create({
+    date: Date.new(2016, 04, 26),
+    time_slot: '0500 Early Morning',
+    weather: 'Sunny',
+
+    events: ""
+})
+e = CalendarDay.find_by(date: Date.new(2016, 04, 26)).calendar_events.create({
+    date: Date.new(2016, 04, 26),
+    time_slot: '1600 After School',
+    weather: 'Sunny',
+
+    events: "Free time. If there are Confidants available, I forgot to note them, as I chose to Steal Treasure today"
+})
+e = CalendarDay.find_by(date: Date.new(2016, 04, 26)).calendar_events.create({
+    date: Date.new(2016, 04, 26),
+    time_slot: '2000 Evening',
+    weather: 'Sunny',
+
+    events: "Free time"
+})
+e.confidant_availability_events.create({
+    confidant: death,
+    location: 'Clinic',
+})
+
+
